@@ -9,7 +9,6 @@ public class LanguageChangeTest extends TestBase
             .changeLanguage()
             .changedToEnglish();
 
-
 }
 
 

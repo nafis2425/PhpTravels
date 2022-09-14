@@ -16,7 +16,7 @@ import javax.swing.*;
 public class dashBoardPage {
 
 
-   public static WebDriver driver= browser.driver;
+   public static WebDriver driver= browser.driver;//]=]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]\\\
 
    @FindBy(css = "a[title='hotels']") WebElement hotelLink;
 
@@ -48,8 +48,6 @@ public class dashBoardPage {
     return PageFactory.initElements(driver,ProfilePage.class);
     }
     public MyBookingsPage navigateToMyBookings(){
-
-
 
         myBookingsBTN.click();
     return PageFactory.initElements(driver,MyBookingsPage.class);

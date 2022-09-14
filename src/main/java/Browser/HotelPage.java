@@ -18,7 +18,7 @@ public class HotelPage {
 @FindBy(xpath = "//li[normalize-space()='Indiana,United States']") WebElement indiana;
 
 
-public HotelPage validateHotelPresence(){
+public HotelPage validateHotelTitle(){
     Assert.assertEquals(driver.getTitle(),"Search Hotels - PHPTRAVELS", "Title is not matched");
     return PageFactory.initElements(driver, HotelPage.class);
 

@@ -19,18 +19,16 @@ public class TestBase {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
-//    @AfterMethod
-//    public void closeBrowser() {
-//        driver.close();
-//        driver.quit();
+    @AfterMethod
+    public void closeBrowser() {
+        driver.close();
+        driver.quit();
+    }
 
     public LoginPage startLoginPage(){
 
         return PageFactory.initElements(driver,LoginPage.class);
     }
-
-
-
 
 }
 

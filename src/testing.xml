@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PHPTRAVELS_tests">
+    <test name="PHP Test Cases">
+        <classes>
+            <class name="LoginTest" />
+            <class name="HotelTest" />
+            <class name="AddFundTest" />
+            <class name="dashBoardTest" />
+            <class name="LanguageChangeTest" />
+            <class name="MyBookingsTest" />
+            <class name="ViewVoucherTest" />
+
+
+
+
+        </classes>
+    </test>
+</suite> <!-- Suite -->
