@@ -27,6 +27,12 @@ public class LoginPage {
     @FindBy(xpath = "//button[@type='submit']")
     WebElement sign_in;
 
+    @FindBy(css = "#languages")
+    WebElement laguageDropdown;
+
+    @FindBy(xpath = "//a[normalize-space()='English']")
+    WebElement English;
+
     public dashBoardPage logIn() throws InterruptedException {
 
 
@@ -43,6 +49,14 @@ public class LoginPage {
 
 
     }
+
+    public midPage changeLanguage() throws InterruptedException {
+        laguageDropdown.click();
+        Thread.sleep(2000);
+        English.click();
+        return PageFactory.initElements(driver,midPage.class);
+    }
+
 
     public LoginPage validateLogin() {
         Assert.assertEquals(driver.getTitle(), "Login - PHPTRAVELS",

@@ -8,13 +8,21 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends TestBase{
 
-
-    @Test
-    public void test01() throws InterruptedException {
+    @Test (priority = 1)
+    public void test02() throws InterruptedException {
         startLoginPage()
+                .changeLanguage()
+                .changedToEnglish()
                 .validateLogin();
-
     }
 
+
+    @Test (priority = 2)
+    public void test01() throws InterruptedException {
+        startLoginPage()
+                .changeLanguage()
+                .changedToEnglish()
+                .logIn();
+    }
 
 }

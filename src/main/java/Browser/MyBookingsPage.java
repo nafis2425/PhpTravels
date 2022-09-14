@@ -20,8 +20,4 @@ public class MyBookingsPage  {
         return PageFactory.initElements(driver,ViewVoucher.class);
     }
 
-
-
-
-
 }

@@ -18,22 +18,11 @@ public class AddFundPage {
 
     public StripePayment AddFund() throws InterruptedException {
 
-
-
         Pay_With_Stripe.click();
 
-
         Thread.sleep(3000);
-
         Pay_Now.click();
-
-
-
         return PageFactory.initElements(driver,StripePayment.class);
 
 
-    }
-
-
-
-}
+    }}

@@ -21,14 +21,10 @@ public class dashBoardPage {
    @FindBy(css = "a[title='hotels']") WebElement hotelLink;
 
 
+    @FindBy(css = ".title") WebElement WelcomeTXT;
 
 
 
-    @FindBy(css = "#languages")
-    WebElement laguageDropdown;
-
-    @FindBy(xpath = "//a[normalize-space()='Russian']")
-    WebElement russian;
 
     @FindBy(xpath = "//a[@class=' waves-effect'][normalize-space()='My Profile']")
     WebElement myProfileBTN;
@@ -42,11 +38,7 @@ public class dashBoardPage {
     @FindBy(xpath = "//a[@class=' waves-effect'][normalize-space()='Logout'])")
     WebElement logOut;
 
-    public void changeLanguage() throws InterruptedException {
-        laguageDropdown.click();
-        Thread.sleep(2000);
-        russian.click();
-    }
+
     public AddFundPage navigateToAddFunds(){
         addFunds.click();
         return PageFactory.initElements(driver, AddFundPage.class);
@@ -77,7 +69,7 @@ public class dashBoardPage {
         Actions actions= new Actions(driver);
 
         actions.moveToElement(ele).build().perform();
-        driver.findElement(By.xpath("(//a[contains(@class,'waves-effect')][normalize-space()='Terms of Use'])[1]")).click();
+        driver.findElement(By.xpath(("(//a[contains(@class,'waves-effect')][contains(text(),'مطروح مصر')])[1]"))).click();
         return PageFactory.initElements(driver, CompanyPage.class);
 
 
@@ -97,7 +89,11 @@ public class dashBoardPage {
         return PageFactory.initElements(driver,dashBoardPage.class);
     }
 
-
+    public dashBoardPage testWelcome(){
+        String expectedTXT= "Recent Searches";
+        Assert.assertEquals(WelcomeTXT.getText(),expectedTXT,"not here");
+        return this;
+    }
 
 
 
